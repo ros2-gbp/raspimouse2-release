@@ -1,0 +1,12 @@
+Source: ros-dashing-raspimouse
+Section: misc
+Priority: optional
+Maintainer: RT Corporation <shop@rt-net.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-dashing-ament-cmake, ros-dashing-ament-lint-auto, ros-dashing-ament-lint-common, ros-dashing-geometry-msgs, ros-dashing-nav-msgs, ros-dashing-raspimouse-msgs, ros-dashing-rclcpp, ros-dashing-rclcpp-components, ros-dashing-rclcpp-lifecycle, ros-dashing-std-msgs, ros-dashing-std-srvs, ros-dashing-tf2, ros-dashing-tf2-ros, ros-dashing-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-dashing-raspimouse
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-dashing-geometry-msgs, ros-dashing-nav-msgs, ros-dashing-raspimouse-msgs, ros-dashing-rclcpp, ros-dashing-rclcpp-components, ros-dashing-rclcpp-lifecycle, ros-dashing-std-msgs, ros-dashing-std-srvs, ros-dashing-tf2, ros-dashing-tf2-ros, ros-dashing-ros-workspace
+Description: RaspiMouse ROS 2 node
