@@ -1,9 +1,21 @@
 # Raspimouse Node
-[![industrial_ci](https://github.com/rt-net/raspimouse2/workflows/industrial_ci/badge.svg?branch=master)](https://github.com/rt-net/raspimouse2/actions?query=workflow%3Aindustrial_ci+branch%3Amaster)
 
 ROS 2 node for the Raspberry Pi Mouse.
 
-![raspimouse](https://github.com/rt-net/raspimouse2/blob/images/raspimouse.png)
+![raspimouse](https://rt-net.jp/wp-content/uploads/2020/04/Raspberry-Pi-Mouse.png)
+
+## Build Status
+
+### master branch
+
+[![industrial_ci](https://github.com/rt-net/raspimouse2/workflows/industrial_ci/badge.svg?branch=master)](https://github.com/rt-net/raspimouse2/actions?query=workflow%3Aindustrial_ci+branch%3Amaster)
+
+### Source Build Status on ROS2 Buildfarm
+#### Bionic + Dashing ([`dashing-devel`](https://github.com/rt-net/raspimouse2/tree/dashing-devel))
+
+| raspimouse | raspimouse_msgs |
+|:---:|:---:|
+| [![](http://build.ros2.org/buildStatus/icon?job=Dsrc_uB__raspimouse__ubuntu_bionic__source)](http://build.ros2.org/view/Dsrc_uB/job/Dsrc_uB__raspimouse__ubuntu_bionic__source/) | [![](http://build.ros2.org/buildStatus/icon?job=Dsrc_uB__raspimouse_msgs__ubuntu_bionic__source/)](http://build.ros2.org/view/Dsrc_uB/job/Dsrc_uB__raspimouse_msgs__ubuntu_bionic__source/) |
 
 ## Requirements
 
@@ -11,12 +23,12 @@ ROS 2 node for the Raspberry Pi Mouse.
   - https://rt-net.jp/products/raspberrypimousev3/
   - [RT Robot Shop](https://www.rt-shop.jp/index.php?main_page=product_info&cPath=1299_1395&products_id=3774)
 - Linux OS
-  - Ubuntu server 18.04
-  - https://wiki.ubuntu.com/ARM/RaspberryPi
+  - Ubuntu server 20.04
+  - https://ubuntu.com/download/raspberry-pi
 - Device Driver
   - [rt-net/RaspberryPiMouse](https://github.com/rt-net/RaspberryPiMouse)
 - ROS
-  - [Dashing Diademata](https://index.ros.org/doc/ros2/Installation/Dashing/Linux-Install-Debians/)
+  - [Foxy Fitzroy](https://index.ros.org/doc/ros2/Installation/Foxy/Linux-Install-Debians/)
 
 ## Installation
 
