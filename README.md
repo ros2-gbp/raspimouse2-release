@@ -1,3 +1,28 @@
+## raspimouse2 (humble) - 1.1.1-4
+
+The packages in the `raspimouse2` repository were released into the `humble` distro by running `/usr/local/bin/bloom-release raspimouse2 --rosdistro humble` on `Mon, 30 Jan 2023 05:56:37 -0000`
+
+These packages were released:
+- `raspimouse`
+- `raspimouse_msgs`
+
+Version of package(s) in repository `raspimouse2`:
+
+- upstream repository: https://github.com/rt-net/raspimouse2.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `1.1.1-3`
+- new version: `1.1.1-4`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.1`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## raspimouse2 (humble) - 1.1.1-3
 
 The packages in the `raspimouse2` repository were released into the `humble` distro by running `/usr/local/bin/bloom-release raspimouse2 --rosdistro humble` on `Mon, 30 Jan 2023 05:52:29 -0000`
