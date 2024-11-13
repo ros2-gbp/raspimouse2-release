@@ -1,35 +1,29 @@
 # Raspimouse Node
 
+[![industrial_ci](https://github.com/rt-net/raspimouse2/actions/workflows/industrial_ci.yml/badge.svg?branch=master)](https://github.com/rt-net/raspimouse2/actions/workflows/industrial_ci.yml)
+
 ROS 2 node for the Raspberry Pi Mouse.
 
-![raspimouse](https://rt-net.jp/wp-content/uploads/2020/04/Raspberry-Pi-Mouse.png)
+![raspimouse](https://rt-net.github.io/images/raspberry-pi-mouse/Raspberry-Pi-Mouse.png)
 
-## Build Status
+**This branch is dedicated to ROS 2 Jazzy. For other distributions, please refer to the corresponding branches listed below.**
 
-### master branch
-
-[![industrial_ci](https://github.com/rt-net/raspimouse2/workflows/industrial_ci/badge.svg?branch=master)](https://github.com/rt-net/raspimouse2/actions?query=workflow%3Aindustrial_ci+branch%3Amaster)
-
-### Source Build Status on ROS2 Buildfarm
-
-| ROS 2 + Ubuntu | raspimouse | raspimouse_msgs |
-|:---:|:---:|:---:|
-| Foxy + Focal ([`foxy-devel`](https://github.com/rt-net/raspimouse2/tree/foxy-devel)) | [![Build Status](https://build.ros2.org/view/Fsrc_uF/job/Fsrc_uF__raspimouse__ubuntu_focal__source/badge/icon)](https://build.ros2.org/view/Fsrc_uF/job/Fsrc_uF__raspimouse__ubuntu_focal__source/) | [![Build Status](https://build.ros2.org/view/Fsrc_uF/job/Fsrc_uF__raspimouse_msgs__ubuntu_focal__source/badge/icon)](https://build.ros2.org/view/Fsrc_uF/job/Fsrc_uF__raspimouse_msgs__ubuntu_focal__source/) |
-| Humble + Jammy ([`humble-devel`](https://github.com/rt-net/raspimouse2/tree/humble-devel)) | **TODO** | **TODO** |
+- ROS 2 Humble ([humble](https://github.com/rt-net/raspimouse2/tree/humble?tab=readme-ov-file))
 
 ## Requirements
 
 - Raspberry Pi Mouse
-  - https://rt-net.jp/products/raspberrypimousev3/
-  - [RT Robot Shop](https://www.rt-shop.jp/index.php?main_page=product_info&cPath=1299_1395&products_id=3774)
+  - [Summary](https://rt-net.jp/products/raspberrypimousev3/)
+  - [RT Robot Shop](https://www.rt-shop.jp/index.php?main_page=product_info&products_id=4141)
 - Linux OS
-  - Ubuntu server 20.04
-  - https://ubuntu.com/download/raspberry-pi
+  - Ubuntu server
+    - 22.04
+    - 24.04
 - Device Driver
   - [rt-net/RaspberryPiMouse](https://github.com/rt-net/RaspberryPiMouse)
-- ROS
-  - [Foxy Fitzroy](https://index.ros.org/doc/ros2/Installation/Foxy/Linux-Install-Debians/)
+- ROS 2
   - [Humble Hawksbill](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html)
+  - [Jazzy Jalisco](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)
 
 ## Installation
 
@@ -44,7 +38,7 @@ $ sudo apt install ros-$ROS_DISTRO-raspimouse
 ```sh
 $ cd ~/ros2_ws/src
 # Clone package
-$ git clone -b $ROS_DISTRO-devel https://github.com/rt-net/raspimouse2
+$ git clone -b $ROS_DISTRO https://github.com/rt-net/raspimouse2
 
 # Install dependencies
 $ rosdep install -r -y -i --from-paths .
@@ -56,6 +50,8 @@ $ source ~/ros2_ws/install/setup.bash
 ```
 
 ## QuickStart
+
+Build and install the [device driver](https://github.com/rt-net/RaspberryPiMouse) in advance.
 
 ```sh
 # Terminal 1
@@ -69,7 +65,7 @@ $ ros2 topic pub -1 /buzzer std_msgs/msg/Int16 '{data: 1000}'
 $ ros2 topic pub -1 /buzzer std_msgs/msg/Int16 '{data: 0}'
 # or rotate motors
 $ ros2 service call /motor_power std_srvs/SetBool '{data: true}'
-$ ros2 topic pub -1 /cmd_vel geometry_msgs/Twist '{linear: {x: 0.1, y: 0, z: 0}, angular: {x: 0, y: 0, z: 0.05}}'
+$ ros2 topic pub -1 /cmd_vel geometry_msgs/msg/TwistStamped '{twist: {linear: {x: 0.05, y: 0, z: 0}, angular: {x: 0, y: 0, z: 0.05}}}'
 # Shutdown
 $ ros2 lifecycle set raspimouse shutdown
 ```
@@ -105,7 +101,7 @@ a velocity command.
 
 ```shell
 $ ros2 service call /motor_power std_srvs/SetBool '{data: true}'
-$ ros2 topic pub -1 /cmd_vel geometry_msgs/Twist '{linear: {x: 0.1, y: 0, z: 0}, angular: {x: 0, y: 0, z: 0.05}}'
+$ ros2 topic pub -1 /cmd_vel geometry_msgs/msg/TwistStamped '{twist: {linear: {x: 0.1, y: 0, z: 0}, angular: {x: 0, y: 0, z: 0.05}}}'
 ```
 
 Odometry information can be checked by echoing the `odom` topic.
@@ -129,7 +125,7 @@ Similarly other sensor information can also be viewed by echoing the relevant to
 
 - `cmd_vel`
 
-  Type: `geometry_msgs/Twist`
+  Type: `geometry_msgs/msg/TwistStamped`
 
   Controls the motors. Specify the forward and turning speeds of the robot.
 
@@ -220,7 +216,7 @@ Similarly other sensor information can also be viewed by echoing the relevant to
 
   Sets the diameter of the robot's wheel.
   The unit is in meters.
-  
+
 - `wheel_tread`
 
   Type: `double`
@@ -298,7 +294,7 @@ Similarly other sensor information can also be viewed by echoing the relevant to
 
   Adds prefix to the frames of the topic `odom`.
   If set as *`mouse`*, the frame_id and the child_frame_id will be *`mouse/odom`* and *`mouse/baes_footprint`*.
-  
+
 ## License
 
 This repository is licensed under the Apache 2.0, see [LICENSE](./LICENSE) for details.
