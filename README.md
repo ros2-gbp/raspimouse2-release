@@ -1,3 +1,28 @@
+## raspimouse2 (rolling) - 2.0.0-1
+
+The packages in the `raspimouse2` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling --track rolling raspimouse2 --edit` on `Wed, 13 Nov 2024 05:53:10 -0000`
+
+These packages were released:
+- `raspimouse`
+- `raspimouse_msgs`
+
+Version of package(s) in repository `raspimouse2`:
+
+- upstream repository: https://github.com/rt-net/raspimouse2.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `2.0.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## raspimouse2 (humble) - 1.1.2-1
 
 The packages in the `raspimouse2` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble raspimouse2` on `Thu, 24 Aug 2023 08:36:12 -0000`
