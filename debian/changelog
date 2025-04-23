@@ -1,0 +1,60 @@
+ros-kilted-raspimouse-msgs (2.0.0-2noble) noble; urgency=high
+
+
+
+ -- RT Corporation <shop@rt-net.jp>  Tue, 05 Nov 2024 06:00:00 -0000
+
+ros-kilted-raspimouse-msgs (1.1.2-2noble) noble; urgency=high
+
+
+
+ -- RT Corporation <shop@rt-net.jp>  Thu, 24 Aug 2023 05:00:00 -0000
+
+ros-kilted-raspimouse-msgs (1.1.1-2noble) noble; urgency=high
+
+
+
+ -- RT Corporation <shop@rt-net.jp>  Thu, 26 Jan 2023 06:00:00 -0000
+
+ros-kilted-raspimouse-msgs (1.1.0-2noble) noble; urgency=high
+
+  * Add authors to package.xml
+
+ -- RT Corporation <shop@rt-net.jp>  Thu, 28 Jul 2022 05:00:00 -0000
+
+ros-kilted-raspimouse-msgs (1.0.2-2noble) noble; urgency=high
+
+
+
+ -- RT Corporation <shop@rt-net.jp>  Tue, 08 Dec 2020 06:00:00 -0000
+
+ros-kilted-raspimouse-msgs (1.0.1-2noble) noble; urgency=high
+
+  * Fix documents of release 1.0.0 (#23 <https://github.com/rt-net/raspimouse2/issues/23>)
+  * Contributors: Shota Aoki
+
+ -- RT Corporation <shop@rt-net.jp>  Wed, 10 Jun 2020 05:00:00 -0000
+
+ros-kilted-raspimouse-msgs (1.0.0-2noble) noble; urgency=high
+
+
+
+ -- RT Corporation <shop@rt-net.jp>  Mon, 08 Jun 2020 05:00:00 -0000
+
+ros-kilted-raspimouse-msgs (0.2.0-2noble) noble; urgency=high
+
+  * Release 0.2.0 (#18 <https://github.com/rt-net/raspimouse2/issues/18>)
+  * Add lint check (#14 <https://github.com/rt-net/raspimouse2/issues/14>)
+  * Adding sensors
+  * Contributors: Daisuke Sato, Geoffrey Biggs, Shota Aoki
+
+ -- RT Corporation <shop@rt-net.jp>  Fri, 22 May 2020 05:00:00 -0000
+
+ros-kilted-raspimouse-msgs (0.1.0-2noble) noble; urgency=high
+
+  * Initial commit
+  * Contributors: Geoffrey Biggs
+
+ -- RT Corporation <shop@rt-net.jp>  Fri, 07 Sep 2018 05:00:00 -0000
+
+
