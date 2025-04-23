@@ -1,1 +1,1 @@
-{"base": "55b1683", "parent": "debian/rolling/raspimouse_msgs", "previous": "17830fe", "trim": "", "trimbase": ""}
+{"base": "55bb832181c9", "parent": "debian/kilted/raspimouse_msgs", "previous": "0adc9df19780", "trim": "", "trimbase": ""}
