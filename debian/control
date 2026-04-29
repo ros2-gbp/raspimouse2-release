@@ -1,0 +1,12 @@
+Source: ros-lyrical-raspimouse
+Section: misc
+Priority: optional
+Maintainer: RT Corporation <shop@rt-net.jp>
+Build-Depends: debhelper (>= 9.0.0), ros-lyrical-ament-cmake, ros-lyrical-ament-lint-auto <!nocheck>, ros-lyrical-ament-lint-common <!nocheck>, ros-lyrical-geometry-msgs, ros-lyrical-lifecycle-msgs, ros-lyrical-nav-msgs, ros-lyrical-raspimouse-msgs, ros-lyrical-rclcpp, ros-lyrical-rclcpp-components, ros-lyrical-rclcpp-lifecycle, ros-lyrical-std-msgs, ros-lyrical-std-srvs, ros-lyrical-tf2, ros-lyrical-tf2-ros, ros-lyrical-ros-workspace
+Homepage: https://index.ros.org/p/raspimouse/#lyrical
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-raspimouse
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-geometry-msgs, ros-lyrical-lifecycle-msgs, ros-lyrical-nav-msgs, ros-lyrical-raspimouse-msgs, ros-lyrical-rclcpp, ros-lyrical-rclcpp-components, ros-lyrical-rclcpp-lifecycle, ros-lyrical-std-msgs, ros-lyrical-std-srvs, ros-lyrical-tf2, ros-lyrical-tf2-ros, ros-lyrical-ros-workspace
+Description: RaspiMouse ROS 2 node
